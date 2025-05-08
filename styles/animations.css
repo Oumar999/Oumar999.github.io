@@ -1,0 +1,109 @@
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply animations */
+#hero h1, #hero h2, #hero .cta-button {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+#hero h1 {
+  animation-delay: 0.2s;
+}
+
+#hero h2 {
+  animation-delay: 0.4s;
+}
+
+#hero .cta-button {
+  animation-delay: 0.6s;
+}
+
+.cta-button:hover {
+  animation: pulse 1s infinite;
+}
+
+.nav-links li {
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
+}
+
+.nav-links li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.nav-links li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.nav-links li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Smooth section transitions */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add this JavaScript to your HTML file to activate sections on scroll */
+/* 
+  document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section');
+    
+    function checkSections() {
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (sectionTop < windowHeight * 0.75) {
+          section.classList.add('active');
+        }
+      });
+    }
+    
+    // Check sections on page load
+    checkSections();
+    
+    // Check sections on scroll
+    window.addEventListener('scroll', checkSections);
+  });
+*/

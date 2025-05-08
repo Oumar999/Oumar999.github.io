@@ -1,0 +1,105 @@
+/* Responsive styles */
+/* Mobile styles (up to 480px) */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  #hero h2 {
+    font-size: 1.25rem;
+  }
+  
+  #main-nav {
+    padding: var(--space-2) 0;
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+  }
+  
+  .nav-links {
+    gap: var(--space-2);
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: var(--space-1);
+  }
+  
+  .about-content,
+  .contact-container {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .image-container {
+    height: 250px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  section {
+    padding: var(--space-5) 0;
+  }
+}
+
+/* Tablet styles (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  #hero h1 {
+    font-size: 3rem;
+  }
+  
+  .about-content,
+  .contact-container {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  section {
+    padding: var(--space-6) 0;
+  }
+}
+
+/* Laptop styles (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  section {
+    padding: var(--space-6) 0;
+  }
+}
+
+/* Large desktop styles (1025px and above) */
+@media screen and (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+  }
+  
+  section {
+    padding: var(--space-7) 0;
+  }
+}
